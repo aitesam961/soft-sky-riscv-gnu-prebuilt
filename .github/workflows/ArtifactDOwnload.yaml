@@ -25,4 +25,11 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: trapfile
-        path: built_tc/trapfiles
+        path: trapfile
+
+    - name: Download Artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: trapfile
+        path: trapfile/files
+
