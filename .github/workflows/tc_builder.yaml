@@ -24,7 +24,7 @@ jobs:
           git clone https://github.com/riscv/riscv-gnu-toolchain
           cd riscv-gnu-toolchain
           ./configure --prefix=/opt/riscv
-          make -j8
+          make -j32
 
       - name: Move Toolchain to Repository Directory
         run: mv riscv-gnu-toolchain /opt/riscv
