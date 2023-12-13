@@ -1,9 +1,13 @@
 name: Newbuilder RISC-V GNU Toolchain
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'Run the RISC-V Toolchain build'
+        required: true
+        default: 'yes'
+
 
 jobs:
   build:
