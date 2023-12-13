@@ -25,4 +25,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: trapfile
-        path: /built_tc/trapfile.txt
+        path: built_tc/trapfiles
