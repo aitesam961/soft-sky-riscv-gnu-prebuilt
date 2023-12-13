@@ -1,0 +1,20 @@
+name: Toolchain CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      generate-numbers:
+        description: 'Save Artifacts to dir'
+        default: 'true'
+
+jobs:
+  save-toolchain-artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Save Toolchain Artifact
+      run: |
+        cp $GITHUB_WORKSPACE/riscv-toolchain.zip $GITHUB_WORKSPACE/toolchain/
