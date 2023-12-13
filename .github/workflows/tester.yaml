@@ -18,11 +18,11 @@ jobs:
 
     - name: Create Trap File
       run: |
-        echo "This is a trap file." > build_tc/trapfile.txt
+        echo "This is a trap file." > trapfile.txt
         ls -R  # Print the directory structure for debugging purposes
 
     - name: Save as Artifact
       uses: actions/upload-artifact@v3
       with:
         name: trapfile
-        path: trapfile.txt
+        path: build_tc/trapfile.txt
