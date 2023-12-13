@@ -7,11 +7,13 @@ This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` f
 
 ## Installation
 
-
 To Verify installation 
+
+
 Add binaries to Path
 
-``` 
+```
+# Verify Install
 $ riscv64-unknown-elf-gcc --version
 ```
 
