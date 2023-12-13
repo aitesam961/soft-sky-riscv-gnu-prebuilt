@@ -32,8 +32,21 @@ jobs:
       - name: Check for Changes
         id: check_changes
         run: |
-          git diff --exit-code || echo "Changes found"
+          if ! git diff --exit-code; then
+            echo "Changes found"
+          else
+            echo "No changes"
+            exit 1
+          fi
 
+      - name: Commit and Push Changes
+        if: steps.check_changes.outputs.return-code == '0'
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Add RISC-V Toolchain"
+          git push origin HEAD:$GITHUB_REF
 
       - name: Create Builds Directory
         run: mkdir -p builds
@@ -45,4 +58,4 @@ jobs:
         run: |
           git add builds/
           git commit -m "Add RISC-V Toolchain Binary"
-          git push origin $GITHUB_REF
+          git push origin HEAD:$GITHUB_REF
