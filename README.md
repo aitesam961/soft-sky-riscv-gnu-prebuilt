@@ -6,7 +6,14 @@ Up-to-date Prebuilt RISCV GNU toolchain for painless setup. No more build from s
 This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` from source. Just download the prebuilt binaries, add to path and use.
 
 ## Installation
-// Coming soon
+
+
+To Verify installation 
+Add binaries to Path
+
+``` 
+$ riscv64-unknown-elf-gcc --version
+```
 
 ## TODO:
 
