@@ -26,8 +26,16 @@ jobs:
           ./configure --prefix=/opt/riscv
           make -j8
 
-      - name: Create Artifact
+      - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: riscv-toolchain
           path: /opt/riscv
+
+      - name: Commit and Push Artifact
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add builds
+          git commit -m "Add RISC-V Toolchain artifact"
+          git push
