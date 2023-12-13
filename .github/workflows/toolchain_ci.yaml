@@ -1,27 +1,28 @@
-name: Toolchain CI
+name: Create and Save Artifact
 
 on:
   workflow_dispatch:
     inputs:
-      generate-numbers:
-        description: 'Save Artifacts to dir'
-        default: 'true'
+      build:
+        description: 'ArtifactSaveTester'
+        required: true
+        default: 'yes'
 
 jobs:
-  save-toolchain-artifact:
+  create_and_save_artifact:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Download Artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: riscv-toolchain # replace with the actual name of your artifact
-        path: ${{ github.workspace }}
-
-    - name: Save Toolchain Artifact
+    - name: Create Trap File
       run: |
-        cp $GITHUB_WORKSPACE/riscv-toolchain.zip $GITHUB_WORKSPACE/toolchain/
+        echo "This is a trap file." > build_tc/trapfile.txt
+        ls -R  # Print the directory structure for debugging purposes
 
+    - name: Save as Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: trapfile
+        path: trapfile.txt
