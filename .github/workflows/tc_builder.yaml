@@ -1,9 +1,12 @@
 name: Build RISC-V Toolchain
 
 on:
-  push:
-    branches:
-      - main  # adjust the branch name as needed
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'Run the RISC-V Toolchain build'
+        required: true
+        default: 'yes'
 
 jobs:
   build:
