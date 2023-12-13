@@ -1,0 +1,35 @@
+name: Build RISC-V Toolchain
+
+on:
+  push:
+    branches:
+      - main  # adjust the branch name as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: sudo apt-get install -y autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev
+
+      - name: Build RISC-V Toolchain
+        run: |
+          git clone https://github.com/riscv/riscv-gnu-toolchain
+          cd riscv-gnu-toolchain
+          ./configure --prefix=/opt/riscv
+          make -j8
+
+      - name: Move Toolchain to Repository Directory
+        run: mv riscv-gnu-toolchain /opt/riscv
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add /opt/riscv
+          git commit -m "Add RISC-V Toolchain"
+          git push
