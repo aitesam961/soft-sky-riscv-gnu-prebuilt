@@ -37,9 +37,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: riscv-gnu-toolchain
-          path: $GITHUB_WORKSPACE/toolchain
-
-      - name: Cleanup
-        run: |
-          rm -rf riscv-gnu-toolchain
+          path: /opt/riscv
 
