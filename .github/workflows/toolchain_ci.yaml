@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: trapfile
-        path: trapfile.txt
+        path: /built_tc/trapfile.txt
 
     - name: Download Toolchain Artifact
       uses: actions/download-artifact@v3
