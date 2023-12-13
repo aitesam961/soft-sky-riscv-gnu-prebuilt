@@ -26,5 +26,8 @@ jobs:
           ./configure --prefix=/opt/riscv
           make -j8
 
-      - name: Move Toolchain to Repository Directory
-        run: mv riscv-gnu-toolchain /opt/riscv
+      - name: Create Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: riscv-toolchain
+          path: /opt/riscv
