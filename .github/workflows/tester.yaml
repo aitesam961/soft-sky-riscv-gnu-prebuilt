@@ -29,4 +29,6 @@ jobs:
         git config --global user.name "GitHub Actions"
         git add random_numbers.txt
         git commit -m "Generate random numbers"
-        git push
+        git push origin HEAD
+
+# Note: No need to set up authentication explicitly, as the GITHUB_TOKEN is automatically available.
