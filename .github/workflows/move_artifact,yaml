@@ -1,6 +1,13 @@
 name: Create and Save Artifact
 
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'ArtifactSaveTester'
+        required: true
+        default: 'yes'
+
 
 jobs:
   create_and_save_artifact:
