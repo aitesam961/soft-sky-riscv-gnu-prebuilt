@@ -1,10 +1,10 @@
-name: Createfileandsave
+name: Create fileandsave
 
 on:
   workflow_dispatch:
     inputs:
       build:
-        description: 'ArtifactSaveTester'
+        description: 'Artifact Save Tester'
         required: true
         default: 'yes'
 
