@@ -1,32 +1,20 @@
-name: Move Artifact
+name: Create and Save Artifact
 
-on:
-  workflow_dispatch:
-    inputs:
-      build:
-        description: 'Move Artifact'
-        required: true
-        default: 'yes'
+on: [push]
 
 jobs:
-  move-artifact:
+  create_and_save_artifact:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Move Artifact
-        run: |
-          # Create the destination directory if it doesn't exist
-          mkdir -p path/to/destination/directory
+    - name: Create tttt.txt
+      run: echo "This is a sample text file." > tttt.txt
 
-          # Move the artifact to the destination directory
-          mv risvc-toolchain.zip path/to/destination/directory/
-
-          # Commit the changes
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add path/to/destination/directory/risvc-toolchain.zip
-          git commit -m "Move risvc-toolchain.zip to path/to/destination/directory/"
-          git push
+    - name: Save as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: tttt.txt
