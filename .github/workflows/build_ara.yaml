@@ -17,6 +17,7 @@ jobs:
 
     - name: Set up RISC-V toolchain
       run: |
+        git clone https://github.com/pulp-platform/ara.git
         cd ara
         git submodule update --init --recursive
         git submodule sync --recursive
