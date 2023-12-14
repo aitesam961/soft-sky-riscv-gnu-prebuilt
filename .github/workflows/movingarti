@@ -1,0 +1,27 @@
+name: Createfileandsave
+
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'ArtifactSaveTester'
+        required: true
+        default: 'yes'
+
+
+jobs:
+  create_and_save_artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create tttt.txt
+      run: echo "This is a sample text file." > tttt.txt
+
+    - name: Save as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: tttt.txt
