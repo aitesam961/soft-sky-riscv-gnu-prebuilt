@@ -15,7 +15,14 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        
+      - name: Fetch Artifact
+        uses: actions/download-artifact@v2
+        with:
+         name: trapfile
+         path: riscv-toolchain.zip
 
+         
       - name: Move Artifact
         run: |
           # Create the destination directory if it doesn't exist
