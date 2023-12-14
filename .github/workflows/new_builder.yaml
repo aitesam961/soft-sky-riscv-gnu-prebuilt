@@ -17,9 +17,9 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Fetch Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
-         name: trapfile
+         name: riscv-toolchain
          path: riscv-toolchain.zip
 
          
