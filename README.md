@@ -31,6 +31,10 @@ Target: riscv64-unknown-elf
 Configured with: ../configure --build=x86_64-linux-gnu
 ...
 ```
+
+### License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0), ensuring that it remains open source and freely accessible to all. Feel free to explore, contribute, and use this software in compliance with the terms of the GPL-3.0 license. Embrace the spirit of collaboration and freedom in software development!
+
 ### TODO:
 
 - [ ] Build for both `newlib` and `linux` toolchains
