@@ -20,9 +20,10 @@ $ sudo tar -xzf riscv-toolchain.tar.gz -C /tools/riscv/
 $ export PATH=$PATH:/tools/riscv/bin
 ```
 ### Verify installation 
-Run
+Run the following Command
 ```
 $ riscv64-unknown-elf-gcc -v
+
 Using built-in specs.
 COLLECT_GCC=riscv64-unknown-elf-gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper
