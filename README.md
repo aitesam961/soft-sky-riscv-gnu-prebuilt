@@ -10,7 +10,7 @@ This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` f
 
 ### Installation
 - Download the prebuilt binaries from GitHub Actions > Artifacts
-- Create directory in the root e.g `/tools/riscv` or `/opt/riscv`. Requried `sudo`
+- Create directory in the root e.g `/tools/riscv` or `/opt/riscv`. Requires `sudo`
 ```
 $ sudo mkdir /tools/riscv
 ```
