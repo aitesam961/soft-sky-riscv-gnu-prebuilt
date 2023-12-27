@@ -23,8 +23,13 @@ $ export PATH=$PATH:/tools/riscv/bin
 Run
 ```
 $ riscv64-unknown-elf-gcc -v
+Using built-in specs.
+COLLECT_GCC=riscv64-unknown-elf-gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/riscv64-unknown-elf/10.2.0/lto-wrapper
+Target: riscv64-unknown-elf
+Configured with: ../configure --build=x86_64-linux-gnu
+...
 ```
-
 ### TODO:
 
 - [ ] Build for both `newlib` and `linux` toolchains
