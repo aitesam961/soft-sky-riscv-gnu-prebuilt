@@ -1,4 +1,4 @@
-name: Build RISC-V Toolchain
+name: Build RISC-V ISA sim
 
 on:
   workflow_dispatch:
