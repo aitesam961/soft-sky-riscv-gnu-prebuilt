@@ -1,0 +1,35 @@
+name: Build RISC-V PK
+
+on:
+  workflow_dispatch:
+    inputs:
+      build:
+        description: 'Run the RISC-V Toolchain build'
+        required: true
+        default: 'yes'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: sudo apt-get install device-tree-compiler
+
+      - name: Build RISC-V Toolchain
+        run: |
+          git clone https://github.com/riscv-software-src/riscv-pk.git
+          cd riscv-pk
+          mkdir build
+          cd build
+          ../configure --prefix=$RISCV --host=riscv64-unknown-elf
+          make
+          make install
+      - name: Create Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: riscv-toolchain
+          path: /opt/riscv
