@@ -26,10 +26,10 @@ jobs:
           mkdir build
           cd build
           ../configure --prefix=$RISCV --host=riscv64-unknown-elf
-          make
+          make -j16
           make install
       - name: Create Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: riscv-toolchain
+          name: riscv-pk
           path: /opt/riscv

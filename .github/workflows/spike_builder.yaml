@@ -31,5 +31,5 @@ jobs:
       - name: Create Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: riscv-toolchain
+          name: riscv-spike
           path: /opt/riscv
