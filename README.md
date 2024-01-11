@@ -10,7 +10,6 @@ This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` f
 - [ ]   RV64 Newlib
 - [ ]   RV64 Linux
 - [ ]   RV32 Newlib
-- [ ]   RV32 GC
 - [ ]   Multi-lib Cross Compiler (Baremetal)
 - [ ]   Multi-lib Cross Compiler (Linux)
 
