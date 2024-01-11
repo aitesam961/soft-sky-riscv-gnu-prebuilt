@@ -33,6 +33,7 @@ $ export PATH=/home/usr/riscv/riscv-toolchain/bin:$PATH     # Add the path at th
 ```
 
 5- Save `.bashrc` (Ctrl+O, ENTER, Ctrl+X)
+
 6- Apply Changes
 ```
 $ source .bashrc
