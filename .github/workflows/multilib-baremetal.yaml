@@ -1,4 +1,4 @@
-name: Build RISC-V Toolchain Multi-Lib Cross Compiler (baremetal)
+name: Build RISC-V Toolchain Baremetal Multi-Lib Cross Compiler
 
 on:
   workflow_dispatch:
