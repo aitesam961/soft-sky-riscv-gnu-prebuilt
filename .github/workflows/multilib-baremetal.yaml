@@ -1,4 +1,4 @@
-name: Build RISC-V Toolchain Multi-Lib Cross Compiler 
+name: Build RISC-V Toolchain Multi-Lib Cross Compiler (baremetal)
 
 on:
   workflow_dispatch:
@@ -23,11 +23,11 @@ jobs:
         run: |
           git clone https://github.com/riscv/riscv-gnu-toolchain
           cd riscv-gnu-toolchain
-          ./configure --prefix=/opt/riscv -
+          ./configure --prefix=/opt/riscv --enable-multilib
           make -j $(nproc)
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: riscv-toolchain-multi-cc
+          name: multilib-cc-baremetal
           path: /opt/riscv
