@@ -17,6 +17,7 @@ If you require a custom configuration, consider building yourself or open an Iss
 
 ### Installation
 1- Download prebuilt binaries from GitHub Actions > Artifacts
+
 2- Create directory for sources. Preferred `/home/usr/` to avoid the possibility of toolchain affecting any of the system files.
 
 ```
