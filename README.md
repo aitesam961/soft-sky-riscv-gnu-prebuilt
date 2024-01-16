@@ -2,7 +2,8 @@
 Up-to-date Prebuilt RISCV GNU toolchain for painless setup. No more build from source everytime. The purpose of this effort is to save time and computer resources for users and a contribution to eco-friendly computing practices.
 
 ### Supported Environment
-Prebuilt riscv64 based binaries are built on Ubuntu 22 LTS and tested on Ubuntu 23.10. 
+Prebuilt riscv64 based binaries for x86_64 hardware running Linux.
+Built on Ubuntu Latest  and tested on Ubuntu 23.10.
 
 This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` from source. Just download the prebuilt binaries, add to path and use.
 
