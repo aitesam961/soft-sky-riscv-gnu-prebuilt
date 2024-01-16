@@ -2,21 +2,25 @@
 Up-to-date Prebuilt RISCV GNU toolchain for painless setup. No more build from source everytime. The purpose of this effort is to save time and computer resources for users and a contribution to eco-friendly computing practices.
 
 ### Supported Environment
-Prebuilt riscv64 based binaries are built on Ubuntu 22 LTS and tested on Ubuntu 23.10. 
+Prebuilt riscv-gnu-toolchain binaries for x86_64 host running Linux.
+Built on Ubuntu Latest  and tested on Ubuntu 23.10.
 
 This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` from source. Just download the prebuilt binaries, add to path and use.
 
 ### Available Configurations
 - [x]   RV64 Newlib
+- [x]   RV64GCV
 - [x]   RV64 Linux
 - [x]   RV32 Newlib
 - [x]   Multi-lib Cross Compiler (Baremetal)
 - [x]   Multi-lib Cross Compiler (Linux)
 
+
 If you require a custom configuration, consider building yourself or open an Issue with tag:`Enhancement`
 
 ### Installation
 1- Download prebuilt binaries from GitHub Actions > Artifacts
+
 2- Create directory for sources. Preferred `/home/usr/` to avoid the possibility of toolchain affecting any of the system files.
 
 ```
