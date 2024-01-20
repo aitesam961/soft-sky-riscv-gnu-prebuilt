@@ -59,6 +59,11 @@ COLLECT_LTO_WRAPPER=/home/aitesam961/riscv/riscv-toolchain/bin/../libexec/gcc/ri
 Target: riscv64-unknown-elf
 ```
 
+It is highly recommended to install the dependencies mentioned in `riscv-gnu-toolchain` readme. It will help avoid getting stuck at several stages if you move forward to building sibling tools.
+```
+$ sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev
+```
+
 Congratulations! You have successfully installed the riscv-gnu-toolchain without wasting your system resources.
 ### License
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0), ensuring that it remains open source and freely accessible to all. Feel free to explore, contribute, and use this software in compliance with the terms of the GPL-3.0 license. Embrace the spirit of collaboration and freedom in software development!
