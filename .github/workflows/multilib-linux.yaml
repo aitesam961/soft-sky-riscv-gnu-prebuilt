@@ -24,7 +24,7 @@ jobs:
           git clone https://github.com/riscv/riscv-gnu-toolchain
           cd riscv-gnu-toolchain
           ./configure --prefix=/opt/riscv --enable-multilib
-          make linux
+          make -j $(nproc) linux
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
