@@ -21,7 +21,7 @@ jobs:
 
       - name: Build RISC-V Toolchain
         run: |
-          git clone github.com/pulp-platform/cva6-sdk.git
+          git clone https://github.com/pulp-platform/cva6-sdk.git
           cd cva6-sdk
           git checkout fix/cheshire
           git submodule update --init --recursive
