@@ -25,3 +25,5 @@ jobs:
           git checkout 54511b7
           cargo install bender
           bender update
+          bender checkout 
+          bender update
