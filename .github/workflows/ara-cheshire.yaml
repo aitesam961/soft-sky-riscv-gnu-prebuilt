@@ -32,7 +32,7 @@ jobs:
           cargo install bender
           git clone https://github.com/pulp-platform/cheshire.git
           cd cheshire
-          git checkout mp/ara-pulpv1-os-rebase
+          git checkout mp/ara-pulpv1
           bender checkout
       
       - name: Upload Cheshire directory
