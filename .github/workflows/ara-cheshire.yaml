@@ -25,10 +25,11 @@ jobs:
                                   libmpc-dev libmpfr-dev libgmp-dev gawk build-essential \
                                   bison flex texinfo gperf libtool patchutils bc \
                                   zlib1g-dev libexpat-dev ninja-build git cmake \
-                                  libglib2.0-dev
+                                  libglib2.0-dev cargo
           
       - name: Clone Cheshire repository
         run: |
+          cargo install bender
           git clone https://github.com/pulp-platform/cheshire.git
           cd cheshire
           git checkout mp/ara-pulpv1-os-rebase
