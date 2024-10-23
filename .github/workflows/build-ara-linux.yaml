@@ -22,25 +22,9 @@ jobs:
       - name: Get cheshire and deps
         run: |
           git clone https://github.com/pulp-platform/cheshire.git
-	  cd cheshire
-	  git checkout mp/ara-pulpv1-os-rebase 
-	  git status
-	  
-	  bender update
-          bender checkout  
-	  
-      - name: Export variable settings
-        run: |
-          export CHS_ROOT=$(pwd)
-	  export ARA_ROOT=$(bender path ara)
-	  export RVV_KERNELS="hello_world-linux fmatmul-linux fconv3d-linux jacobi2d-linux fdotproduct-linux"
-	  
-	  
-	  cd ARA_ROOT
-	  cd cheshire/sw
-	  
-	  make ${RVV_KERNELS} HOST_TOOLCHAIN_SUFFIX=-11.4.0
-	  make linux-img HOST_TOOLCHAIN_SUFFIX=-11.4.0
+          cd cheshire
+          git checkout mp/ara-pulpv1-os-rebase
+          bender checkout
 	  
 	  
 	  
