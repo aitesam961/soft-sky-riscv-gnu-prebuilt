@@ -30,9 +30,9 @@ jobs:
           
       - name: Clone Cheshire repository
         run: |
-          git clone https://github.com/pulp-platform/cheshire.git
+          git clone https://github.com/mrbilandi/cheshire.git
           cd cheshire
-          git checkout mp/ara-pulpv1-os-rebase
+          git checkout mp/ara-pulpv1-os
           bender checkout
       
       - name: Upload Cheshire directory
