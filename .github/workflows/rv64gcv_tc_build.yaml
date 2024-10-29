@@ -23,7 +23,7 @@ jobs:
         run: |
           git clone https://github.com/riscv/riscv-gnu-toolchain
           cd riscv-gnu-toolchain
-          --with-arch=rv64gcv_zifencei --with-cmodel=medlow --enable-multilib
+          ./configure --prefix=/opt/riscv --with-arch=rv64gcv_zifencei --with-cmodel=medlow --enable-multilib
           make -j $(nproc)
 
       - name: Upload Artifact
