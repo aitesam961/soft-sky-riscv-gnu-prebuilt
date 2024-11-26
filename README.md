@@ -3,7 +3,7 @@ Up-to-date Prebuilt RISCV GNU toolchain for painless setup. No more build from s
 
 ### Supported Environment
 Prebuilt riscv-gnu-toolchain binaries for x86_64 host running Linux.
-Built on Ubuntu Latest  and tested on Ubuntu 23.10.
+Built on Ubuntu Latest  and tested on `Ubuntu 24.04 LTS` and `Ubuntu 22.04 LTS`
 
 This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` from source. Just download the prebuilt binaries, add to path and use.
 
@@ -65,6 +65,27 @@ $ sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip 
 ```
 
 Congratulations! You have successfully installed the riscv-gnu-toolchain without wasting your system resources.
+
+
+# Need Something Else?
+If you are looking for a customized flavour of riscv-toolchain and want to use this framework, follow the instructions below:
+
+1- Fork this repository and clone in your local machine or edit on GitHub.com
+```
+git clone https://github.com/aitesam961/soft-sky-riscv-gnu-prebuilt.git
+cd soft-sky-riscv-gnu-prebuilt/.github/workflows
+```
+2- Create a new `rvxxxxx_tc_build.yaml` file.
+3- Make changes here according to your needs:
+```
+./configure --prefix=/opt/riscv --with-arch=rv32gc --with-abi=ilp32d
+```
+4- Commit (push if on local)
+5- Go to GitHub.com/your_forked_repo > Actions > All Workflows > click your created .yaml file and `Run Workflow`
+
+It will take a while and if all goes well, you should see the artifacts uploaded, else find your errors in build logs.
+
+
 ### License
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0), ensuring that it remains open source and freely accessible to all. Feel free to explore, contribute, and use this software in compliance with the terms of the GPL-3.0 license. Embrace the spirit of collaboration and freedom in software development!
 
