@@ -42,7 +42,7 @@ $ export PATH=/home/usr/riscv/riscv-toolchain/bin:$PATH     # Add the path at th
 ```
 $ source .bashrc
 ```
-7- Add write permissions to the source folder
+7- Add execute permissions to the source folder
 ```
 $ sudo chmod -R +x /home/usr/riscv/riscv-toolchain/
 ```
