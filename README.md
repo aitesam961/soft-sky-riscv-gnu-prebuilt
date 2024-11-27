@@ -75,12 +75,12 @@ If you are looking for a customized flavour of riscv-toolchain and want to use t
 git clone https://github.com/aitesam961/soft-sky-riscv-gnu-prebuilt.git
 cd soft-sky-riscv-gnu-prebuilt/.github/workflows
 ```
-2- Create a new `rvxxxxx_tc_build.yaml` file.
+2- Create a new `rvxxxxx_tc_build.yaml` file.        
 3- Make changes here according to your needs:
 ```
 ./configure --prefix=/opt/riscv --with-arch=rv32gc --with-abi=ilp32d
 ```
-4- Commit (push if on local)
+4- Commit (push if on local)      
 5- Go to GitHub.com/your_forked_repo > Actions > All Workflows > click your created .yaml file and `Run Workflow`
 
 It will take a while and if all goes well, you should see the artifacts uploaded, else find your errors in build logs.
