@@ -67,7 +67,7 @@ $ sudo apt-get install autoconf automake autotools-dev curl python3 python3-pip 
 Congratulations! You have successfully installed the riscv-gnu-toolchain without wasting your system resources.
 
 
-# Need Something Else?
+## Need Something Else?
 If you are looking for a customized flavour of riscv-toolchain and want to use this framework, follow the instructions below:
 
 1- Fork this repository and clone in your local machine or edit on GitHub.com
