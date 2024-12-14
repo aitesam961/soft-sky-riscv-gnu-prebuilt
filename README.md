@@ -86,10 +86,6 @@ cd soft-sky-riscv-gnu-prebuilt/.github/workflows
 It will take a while and if all goes well, you should see the artifacts uploaded, else find your errors in build logs.
 
 
-### License
-
-This Project and information is published under General Public License V3.0 See `LICENSE.txt` for more information.
-> https://www.gnu.org/licenses/quick-guide-gplv3.html
 
 ### Contributions
 Contributions from developers like you make open source a vibrant and innovative space. To contribute to `soft-sky-riscv-gcc-prebuilt`, please follow the guidelines outlined in the `CONTRIBUTING.md` file. Your efforts are highly valued, and together, we can continue to enhance and improve the project for the entire community.
