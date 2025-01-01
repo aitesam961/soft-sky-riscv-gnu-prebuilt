@@ -19,7 +19,7 @@ This repository makes use of GitHub actions to build the `riscv-gnu-toolchain` f
 If you require a custom configuration, consider building yourself or open an Issue with tag:`Enhancement`
 
 ### Installation
-1- Download prebuilt binaries from GitHub Actions > Artifacts
+1- Download prebuilt binaries from GitHub [Actions](https://github.com/aitesam961/soft-sky-riscv-gnu-prebuilt/actions) > Artifacts
 
 2- Create directory for sources. Preferred `/home/usr/` to avoid the possibility of toolchain affecting any of the system files.
 
