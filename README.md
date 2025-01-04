@@ -87,7 +87,9 @@ It will take a while and if all goes well, you should see the artifacts uploaded
 
 
 ### License
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0), ensuring that it remains open source and freely accessible to all. Feel free to explore, contribute, and use this software in compliance with the terms of the GPL-3.0 license. Embrace the spirit of collaboration and freedom in software development!
+
+This Project and information is published under General Public License V3.0 See `LICENSE.txt` for more information.
+> https://www.gnu.org/licenses/quick-guide-gplv3.html
 
 ### Contributions
 Contributions from developers like you make open source a vibrant and innovative space. To contribute to `soft-sky-riscv-gcc-prebuilt`, please follow the guidelines outlined in the `CONTRIBUTING.md` file. Your efforts are highly valued, and together, we can continue to enhance and improve the project for the entire community.
